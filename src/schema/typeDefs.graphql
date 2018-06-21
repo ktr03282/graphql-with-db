@@ -1,0 +1,25 @@
+type Query {
+  books: [Book]
+  user(id: Int!): User
+  users: [User]
+}
+
+type Mutation {
+  createUser(firstName: String!, lastName: String!, email: String): User
+  updateUser(id: Int!, firstName: String, lastName: String, email: String): User
+}
+
+type Book {
+  title: String
+  author: String
+  price: Int
+}
+
+type User {
+  id: Int!
+  firstName: String!
+  lastName: String!
+  email: String
+  createdAt: String!
+  updatedAt: String!
+}
